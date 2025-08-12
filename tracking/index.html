@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Courier Management System</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="logo"><a href="#">Tracking</a></h1>
+    </header>
+    <div class="tracking-page">
+      <h1 class="tracking-heading">Track the status of your Parcel</h1>
+      <p class="tracking-subtitle">
+        Enter the tracking number :
+      </p>
+      <form action="/" method="POST">
+        <input
+          type="text"
+          name="tracking"
+          id="trackingId"
+          class="tracking-input"
+          placeholder="123456 / 987654 / 100000 / 111111"
+        />
+        <input
+          type="submit"
+          onclick="track(event)"
+          value="Track"
+          class="tracking-button"
+        />
+      </form>
+    </div>
+    <div class="container detail hidden">
+      <h3>Your Product Details</h3>
+      <hr />
+      <div class="product-detail">
+        <p>Product ID: <span id="productId"></span></p>
+        <p>Product is: <span id="productName"></span></p>
+        <p>Status: <span id="productStatus"></span></p>
+        <p>Thank You</p>
+      </div>
+      <button class="btn" type="button" onclick="trackAnother(event)">
+        Back
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
